@@ -39,15 +39,15 @@ An elegant LaTeX thesis template designed to be easily customizable
         :---: | :---:
         ![](thumbnails/fc0.png) | ![](thumbnails/bc0.png)
 
--   Easy customization, thanks to the `tex` files contained in the` Config` folder:
+-   Easy customization, thanks to the `tex` files contained in the `Config` folder:
 
-    -   [info.tex](#info.tex), to modify all the properties of the document (title, author, supervisor, co-rapporteur, university, etc ...)
+    -   [info.tex](#infotex), to modify all the properties of the document (title, author, supervisor, co-rapporteur, university, etc ...)
 
-    -   [config.tex](#config.tex), to modify all the properties of the main class `main.cls`, the covers and the composition of the document in its parts (index, summary, thanks, bibliography, etc ...)
+    -   [config.tex](#configtex), to modify all the properties of the main class `main.cls`, the covers and the composition of the document in its parts (index, summary, thanks, bibliography, etc ...)
 
-    -   [chapters.tex](#chapters.tex), to add, remove or comment on chapters
+    -   [chapters.tex](#chapterstex), to add, remove or comment on chapters
 
-    -   [appendices.tex](#appendices.tex), to add, remove or comment on appendices
+    -   [appendices.tex](#appendicestex), to add, remove or comment on appendices
 
 ## Getting started
 
