@@ -8,6 +8,7 @@
 *.bcf
 *.bbl
 *.sh
+*.dvi
 
 Appendices
 Chapters
