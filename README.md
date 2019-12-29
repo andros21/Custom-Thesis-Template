@@ -6,6 +6,23 @@ An elegant LaTeX thesis template designed to be easily customizable
 
   - [Features](#features)
   - [Getting started](#getting-started)
+  - [Configuration](#configuration)
+    - [info.tex](#infotex)
+    - [config.tex](#configtex)
+      - [document class](#document-class)
+      - [additional packages](#additional-packages)
+      - [front cover page](#front-cover-page)
+      - [title page](#title-page)
+      - [formal pages](#formal-pages)
+      - [tables of contents (TOC)](#tables-of-contents-toc)
+      - [margin options](#margin-options)
+      - [colour options](#colour-options)
+      - [hypertext options](#hypertext-options)
+      - [bibliography options](#bibliography-options)
+    - [chapters](#chapterstex)
+    - [appendices.tex](#appendicestex)
+  - [Compilation](#compilation)
+  - [Licensing](#licensing)
 
 ## Features
 
@@ -305,7 +322,7 @@ Path: `Config/chapters.tex`
 
 Path: `Config/appendices.tex`
 
-##
+## Compilation
 
 ## Licensing
 
