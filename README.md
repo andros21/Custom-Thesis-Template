@@ -19,7 +19,7 @@ An elegant LaTeX thesis template designed to be easily customizable
       - [colour options](#colour-options)
       - [hypertext options](#hypertext-options)
       - [bibliography options](#bibliography-options)
-    - [chapters](#chapterstex)
+    - [chapters.tex](#chapterstex)
     - [appendices.tex](#appendicestex)
   - [Compilation](#compilation)
   - [Licensing](#licensing)
@@ -28,7 +28,7 @@ An elegant LaTeX thesis template designed to be easily customizable
 
 -   Cover, possibility to choose between:
 
-    -   **informal cover** (particularly suitable for ink prints on flexible cardboard)
+    -   **informal cover** particularly suitable for ink prints on flexible cardboard
 
         Front Cover [web-5] | Back Cover [web-5]
         :---: | :---:
@@ -48,9 +48,9 @@ An elegant LaTeX thesis template designed to be easily customizable
         :---: | :---: | :---:
         ![](thumbnails/8-t.png) | ![](thumbnails/9-t.png) | ![](thumbnails/10-t.png)
 
-        But there is no limit to the imagination, see ...
+        But there is no limit to the imagination, free to add new wallpapers inside `Figures/Backgrounds`
 
-    -   **formal cover** (particularly suitable for silkscreen printing)
+    -   **formal cover** particularly suitable for silkscreen printing
 
         Front Cover | Back Cover
         :---: | :---:
@@ -89,23 +89,23 @@ cd Beauty-Thesis-Template
 
 Path: `Config/info.tex`
 
-Field | description | example
+field | description | example
 :--- | :--- | :---
-Title               | Title of thesis |
-SubTitle            | Subtitle of thesis |
+Title               | Title of thesis | *Random Analysis*
+SubTitle            | Subtitle of thesis | *No subtitle*
 DegreeName          | Type of thesis | *Master thesis, PhD thesis*
 Date                | Date of the session, or nickname of the session | *23-11-2020, Spring 2020*
 AuthorLabel         | Label of the author | *Author, Student*
-AuthorName          | Name of the Author |
-AuthorSurName       | Surname of the Author |
+AuthorName          | Name of the Author | *Andrew*
+AuthorSurName       | Surname of the Author | *Red*
 SupervisorLabelA    | Label of the 1st supervisor | *Supervisor, Collaborator*
-SupervisorNameA     | Name of the 1st supervisor |
-SupervisorSurNameA  | Surname of the 1st supervisor |
+SupervisorNameA     | Name of the 1st supervisor | *Carl*
+SupervisorSurNameA  | Surname of the 1st supervisor | *Franz*
 SupervisorLabelB    | Label of the 2nd supervisor | *Supervisor, Correlator*
-SupervisorNameB     | Name of the 2nd supervisor |
-SupervisorSurNameB  | Surname of the 2nd supervisor |
+SupervisorNameB     | Name of the 2nd supervisor | *Margaret*
+SupervisorSurNameB  | Surname of the 2nd supervisor | *White*
 Faculty             | Faculty of the  University | *Science and Technologies Faculty*
-University          | University name |
+University          | University name | *University of Milan*
 DepartmentName      | Department name | *Department of Physics*
 GroupName           | Group of research name | *Complex Systems Groups*
 
@@ -156,6 +156,10 @@ All the packages needed to operate the template have already been added to the `
 \usepackage{physics}
 ```
 
+#### pictures option
+
+The `graphicx` package is loaded by default, the `Figures` folder is set as default `graphicspath`, so all the media files that you want to use inside the document, must be added inside this folder
+
 #### front cover page
 
 The front cover is defined within the `main.sty` file, the modifiable options are:
@@ -189,12 +193,12 @@ FrontCoverAuthorFont     | *25* | Author font size
 FrontCoverAuthorFontSpace | *25* | Author newlines space
 FrontCoverAuthorX        | *0mm* | Distance between BLUE-BOX left border and PURPLE-BOX left border
 FrontCoverAuthorY        | *20mm* | Distance between BLUE-BOX top border and PURPLE-BOX top border
-FrontCoverDegreeFont     | *20* |  DegreeName, Date font size, see [info.tex](info.tex)
-FrontCoverDegreeFontSpace | *20* | DegreeName, Date newlines space, see [info.tex](info.tex)
+FrontCoverDegreeFont     | *20* |  DegreeName, Date font size, see [info.tex](infotex)
+FrontCoverDegreeFontSpace | *20* | DegreeName, Date newlines space, see [info.tex](infotex)
 FrontCoverDegreeX        | *0mm* | Distance between CYAN-BOX left border and BLUE-BOX left border
 FrontCoverDegreeY        | *12mm* | Distance between CYAN-BOX top border and BLUE-BOX top border
-FrontCoverSupervisorFont     | *18* |  SupervisorName font size, see [info.tex](info.tex)
-FrontCoverSupervisorFontSpace | *20* | SupervisorName newlines space, see [info.tex](info.tex)
+FrontCoverSupervisorFont     | *18* |  SupervisorName font size, see [info.tex](infotex)
+FrontCoverSupervisorFontSpace | *20* | SupervisorName newlines space, see [info.tex](infotex)
 FrontCoverSupervisorX        | *0mm* | Distance between GREEN-BOX left border and CYAN-BOX left border
 FrontCoverSupervisorY        | *4mm* | Distance between GREEN-BOX top border and STRIPB bottom border
 
@@ -211,7 +215,7 @@ MarkScale | *1.5* | Scale of front cover university mark, YELLOW-BOX scale
 
 #### title page
 
-The **title page** is in fact a duplicate of the **formal cover** inserted inside the thesis immediately after the cover, so the options coincide with those of the **formal cover** inside the `config .tex`
+The **title page** is in fact a duplicate of the **formal cover** inserted inside the thesis immediately after the cover, so the options coincide with those of the **formal cover** inside the `config.tex`
 
 So if `\newcommand{FrontCoverBool}{false}`, you should have the options for the **title page** already set.
 If `\newcommand{FrontCoverBool}{true}`, set them now:
@@ -271,13 +275,14 @@ Choose the type of back cover page, available options:
 back cover opt | default | description
 :--- | :--- | :---
 BackCoverBool | *true* | If *true* use the **informal page** type also for backcover, if *false* blank page
-BackCoverBackgroundNumber | *5* | The 5th wallpaper, 10 wallpapers available from *1* to *10* as for FrontCoverBackgroundNumber see ...
+BackCoverBackgroundNumber | *5* | The 5th wallpaper, 10 wallpapers available from *1* to *10* as for [front cover page](#front-cover-page)
 
 **Clarification**, yes, this is an extra option (a stupid option), because if `\newcommand {FrontCoverBool}{true}` presumably you want the same wallpaper for the **back cover page**, otherwise if `\newcommand{FrontCoverBool}{false}` you want a blank page
 
 #### margin options
 
-The `geometry` package provides an easy and flexible user interface to customize page layout, for the list of the full options visit [https://www.ctan.org/pkg/geometry](https://www.ctan.org/pkg/geometry). Minor changes to the page layout are available inside the `config.tex` file (thanks to the `geometry` package):
+The `geometry` package provides an easy and flexible user interface to customize page layout, for the list of the full options visit [https://www.ctan.org/pkg/geometry](https://www.ctan.org/pkg/geometry)\
+Minor changes to the page layout are available inside the `config.tex` file (thanks to the `geometry` package):
 
 geometry opt | default | description
 :--- | :--- | :---
@@ -314,15 +319,47 @@ breaklinks				  | *true* | If *true* allow links to break over lines
 
 #### bibliography options
 
+The bibliography is enabled by default and is contained in the `main.bib` file, so free to add and modify it, the available options of `bibLaTeX` package editable editable in `config.tex` are:
+
+biblatex opt | default | description
+:--- | :--- | :---
+backend | *biber*			  |	Specifies the database backend. The following backends are supported: *biber*, *bibtex*, *bibtex8*
+style   | *alphabetic*  | Citation styles
+
+BibLaTeX reference [https://www.ctan.org/pkg/biblatex](https://www.ctan.org/pkg/biblatex)\
+Biber reference [https://www.ctan.org/pkg/biber](https://www.ctan.org/pkg/biber)\
+Available styles [https://www.overleaf.com/learn/latex/Biblatex_citation_styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
+
 ### chapters.tex
 
 Path: `Config/chapters.tex`
+
+Depending on the needs, comment or uncomment the chapters, contained within the `Chapters` folder, which you want to insert into the document. For additional needs, just add new chapters with the same command `\include{Chapters/ChapterXXX}`
 
 ### appendices.tex
 
 Path: `Config/appendices.tex`
 
+Depending on the needs, comment or uncomment the appendices, contained within the `Appendices` folder, which you want to insert into the document. For additional needs, just add new appendices with the same command `\include{Appendices/AppendixAAA}`
+
 ## Compilation
+
+**Custom-Thesis-Template** was only tested with **pdfLaTeX** compiler !\
+To full compile **Custom-Thesis-Template** follow this standard scheme:
+
+```shell
+pdflatex main.tex
+biber main.tex # or bibtex main.tex or bibtex8 main.tex, depending on the chosen backend
+pdflatex main.tex
+pdflatex main.tex
+```
+
+after the first compilation, if the bibliography is not modified or bibliographic citations are not inserted, it is possible to compile using only:
+
+```shell
+pdflatex main.tex
+pdflatex main.tex
+```
 
 ## Licensing
 
