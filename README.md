@@ -195,12 +195,12 @@ FrontCoverAuthorFont     | *25* | Author font size
 FrontCoverAuthorFontSpace | *25* | Author newlines space
 FrontCoverAuthorX        | *0mm* | Distance between BLUE-BOX left border and PURPLE-BOX left border
 FrontCoverAuthorY        | *20mm* | Distance between BLUE-BOX top border and PURPLE-BOX top border
-FrontCoverDegreeFont     | *20* |  DegreeName, Date font size, see [info.tex](infotex)
-FrontCoverDegreeFontSpace | *20* | DegreeName, Date newlines space, see [info.tex](infotex)
+FrontCoverDegreeFont     | *20* |  DegreeName, Date font size, see [info.tex](#infotex)
+FrontCoverDegreeFontSpace | *20* | DegreeName, Date newlines space, see [info.tex](#infotex)
 FrontCoverDegreeX        | *0mm* | Distance between CYAN-BOX left border and BLUE-BOX left border
 FrontCoverDegreeY        | *12mm* | Distance between CYAN-BOX top border and BLUE-BOX top border
-FrontCoverSupervisorFont     | *18* |  SupervisorName font size, see [info.tex](infotex)
-FrontCoverSupervisorFontSpace | *20* | SupervisorName newlines space, see [info.tex](infotex)
+FrontCoverSupervisorFont     | *18* |  SupervisorName font size, see [info.tex](#infotex)
+FrontCoverSupervisorFontSpace | *20* | SupervisorName newlines space, see [info.tex](#infotex)
 FrontCoverSupervisorX        | *0mm* | Distance between GREEN-BOX left border and CYAN-BOX left border
 FrontCoverSupervisorY        | *4mm* | Distance between GREEN-BOX top border and STRIPB bottom border
 
