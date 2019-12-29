@@ -158,7 +158,7 @@ All the packages needed to operate the template have already been added to the `
 \usepackage{physics}
 ```
 
-#### graphicx option
+#### graphicx package
 
 The `graphicx` package is loaded by default, the `Figures` folder is set as default `graphicspath`, so all the media files that you want to use inside the document, must be added inside this folder
 
