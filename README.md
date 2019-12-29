@@ -11,6 +11,7 @@ An elegant LaTeX thesis template designed to be easily customizable
     - [config.tex](#configtex)
       - [document class](#document-class)
       - [additional packages](#additional-packages)
+      - [graphicx package](#graphicx-package)
       - [front cover page](#front-cover-page)
       - [title page](#title-page)
       - [formal pages](#formal-pages)
@@ -136,7 +137,8 @@ headsepline 	| *enabled*  | If *enabled*, get a line under the header
 chapterinoneline | *disabled* | If *enabled*,  place the chapter title next to the number on one line
 consistentlayout | *disabled* | If *enabled*, change the layout of the **declaration page**
 
-**Clarification**, with *disabled* I mean *comment* and with *enabled* I mean *uncomment*\
+**Clarification**, with *disabled* I mean *comment* and with *enabled* I mean *uncomment*
+
 For other options or concerns, reference [https://en.wikibooks.org/wiki/LaTeX/Document_Structure](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Preamble)
 
 #### additional packages
@@ -156,7 +158,7 @@ All the packages needed to operate the template have already been added to the `
 \usepackage{physics}
 ```
 
-#### pictures option
+#### graphicx option
 
 The `graphicx` package is loaded by default, the `Figures` folder is set as default `graphicspath`, so all the media files that you want to use inside the document, must be added inside this folder
 
@@ -174,11 +176,11 @@ informal cover opt | default | description
 :--- | :--- | :---
 FrontCoverBackgroundNumber | *5* | The 5th wallpaper, 10 wallpapers available from *1* to *10*
 FrontCoverBackgroundType  | *print* | If *print* high resolution wallpaper is used, if *web* low resolution wallpaper is used
-FrontCoverStripColourA  | *white* | Colour of the 1st strip (from the top), see [colours](colours)
+FrontCoverStripColourA  | *white* | Colour of the 1st strip (from the top), see [colour options](#colour-options)
 FrontCoverStripOpacityA | *0.8* | Opacity of the 1st strip (from the top), values from *0* to *1*
-FrontCoverStripColourB  | *stripgrey* | Colour of the 2nd strip, see [colours](colours)
+FrontCoverStripColourB  | *stripgrey* | Colour of the 2nd strip, see [colour options](#colour-options)
 FrontCoverStripOpacityB | *0.7* | Opacity of the 2nd strip, values from *0* to *1*
-FrontCoverStripColourC  | *white* | Colour of the 3rd strip, see [colours](colours)
+FrontCoverStripColourC  | *white* | Colour of the 3rd strip, see [colour options](#colour-options)
 FrontCoverStripOpacityC | *0.8* | Opacity of the 3rd strip, values from *0* to *1*
 FrontCoverStripsY       | *130mm* | Distance between STRIPB bottom border and PAGE bottom border
 FrontCoverBannerPath    | `Banners/banner` | Path of front cover university banner, YELLOW-BOX
@@ -236,7 +238,7 @@ Quotation | `Vars/quotation.tex` | Maybe some authoritative quote page
 Abstract | `Vars/abstract.tex` | A little summary of the thesis work
 Acknowledgements | `Vars/acknowledgements.tex` | Acknowledgements to someone
 
-Free to modify each of these formal pages within `Vars`, the options available within `config.tex`, instead, are: enable them *true* or disable them *false*
+Free to modify each of these formal pages within `Vars`, the options available within `config.tex`, are enable them *true* or disable them *false*
 
 formal page opt | default
 :--- | :---
@@ -247,7 +249,7 @@ AcknowledgementsBool  | *false*
 
 #### tables of contents (TOC)
 
-The main table of contents is obviously enabled by default and already has links to chapters, appendices, bibliography. You can opt to add additional content tables (enabled *true*, disabled *false*) that LaTeX auto generates according to the content of the thesis
+The main table of contents is obviously enabled by default and already has links to chapters, appendices, bibliography. You can opt to add additional content tables (enabled *true*, disabled *false*) that LaTeX auto generates according to the content of the document
 
 TOC | default | description
 :--- | :--- | :---
@@ -281,7 +283,8 @@ BackCoverBackgroundNumber | *5* | The 5th wallpaper, 10 wallpapers available fro
 
 #### margin options
 
-The `geometry` package provides an easy and flexible user interface to customize page layout, for the list of the full options visit [https://www.ctan.org/pkg/geometry](https://www.ctan.org/pkg/geometry)\
+The `geometry` package provides an easy and flexible user interface to customize page layout, for the list of the full options visit [https://www.ctan.org/pkg/geometry](https://www.ctan.org/pkg/geometry)
+
 Minor changes to the page layout are available inside the `config.tex` file (thanks to the `geometry` package):
 
 geometry opt | default | description
@@ -293,12 +296,15 @@ bottom | *1.5cm* | Bottom margin of the page
 #### colour options
 
 Add custom colours thanks to the package `xcolor`, to use them within the template, for example for the color of the stripes on the front cover page or as a color for hypertext links. The colours set by
-default are two: `mdtRed` (hypertext color) and` stripgrey` (front cover strip color)\
+default are two: `mdtRed` (hypertext color) and` stripgrey` (front cover strip color)
+
 Full reference on the topic here [https://en.wikibooks.org/wiki/LaTeX/Colors](https://en.wikibooks.org/wiki/LaTeX/Colors)
 
 #### hypertext options
 
-The `hyperref` package is used to handle cross-referencing commands in LaTeX to produce hypertext links in the document, for the list of the full options visit [https://www.ctan.org/pkg/hyperref](https://www.ctan.org/pkg/hyperref). Minor changes to the hypertext layout are available inside the `config.tex` file (thanks to the `hyperref` package):
+The `hyperref` package is used to handle cross-referencing commands in LaTeX to produce hypertext links in the document, for the list of the full options visit [https://www.ctan.org/pkg/hyperref](https://www.ctan.org/pkg/hyperref)
+
+Minor changes to the hypertext layout are available inside the `config.tex` file (thanks to the `hyperref` package):
 
 hyperref opt | default | description
 :--- | :--- | :---
