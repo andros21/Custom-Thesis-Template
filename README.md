@@ -295,7 +295,9 @@ bottom | *1.5cm* | Bottom margin of the page
 
 #### colour options
 
-Add custom colours thanks to the package `xcolor`, to use them within the template, for example for the color of the stripes on the front cover page or as a color for hypertext links. The colours set by
+Add custom colours thanks to the package `xcolor`, to use them within the template, for example for the color of the stripes on the front cover page or as a color for hypertext links
+
+The colours set by
 default are two: `mdtRed` (hypertext color) and` stripgrey` (front cover strip color)
 
 Full reference on the topic here [https://en.wikibooks.org/wiki/LaTeX/Colors](https://en.wikibooks.org/wiki/LaTeX/Colors)
@@ -369,8 +371,6 @@ pdflatex main.tex
 
 ## Licensing
 
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
-
-"The code in this project is licensed under MIT license."
+<center>
+<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</center>
