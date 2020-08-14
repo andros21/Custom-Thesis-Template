@@ -2,11 +2,11 @@
 
 An elegant LaTeX thesis template designed to be easily customizable
 
-## Table of contents
+## :newspaper: Table of contents
 
-  - [Features](#features)
-  - [Getting started](#getting-started)
-  - [Configuration](#configuration)
+  - [Features](#star-features)
+  - [Getting started](#rocket-getting-started)
+  - [Configuration](#gear-configuration)
     - [info.tex](#infotex)
     - [config.tex](#configtex)
       - [document class](#document-class)
@@ -22,10 +22,9 @@ An elegant LaTeX thesis template designed to be easily customizable
       - [bibliography options](#bibliography-options)
     - [chapters.tex](#chapterstex)
     - [appendices.tex](#appendicestex)
-  - [Compilation](#compilation)
-  - [Licensing](#licensing)
+  - [Compilation](#computer-compilation)
 
-## Features
+## :star: Features
 
 -   Cover, possibility to choose between:
 
@@ -67,7 +66,7 @@ An elegant LaTeX thesis template designed to be easily customizable
 
     -   [appendices.tex](#appendicestex), to add, remove or comment on appendices
 
-## Getting started
+## :rocket: Getting started
 
 Download the template by cloning the repository:
 
@@ -84,7 +83,7 @@ unzip master.zip
 cd Beauty-Thesis-Template
 ```
 
-## Configuration
+## :gear: Configuration
 
 ### info.tex
 
@@ -110,7 +109,7 @@ University          | University name | *University of Milan*
 DepartmentName      | Department name | *Department of Physics*
 GroupName           | Group of research name | *Complex Systems Groups*
 
-All fields deemed unnecessary can be removed from the document leaving the corresponding field empty, e.g. `\newcommand{GroupName}{}`
+> **I:** all fields deemed unnecessary can be removed from the document leaving the corresponding field empty, e.g. `\newcommand{GroupName}{}`
 
 ### config.tex
 
@@ -137,9 +136,9 @@ headsepline 	| *enabled*  | If *enabled*, get a line under the header
 chapterinoneline | *disabled* | If *enabled*,  place the chapter title next to the number on one line
 consistentlayout | *disabled* | If *enabled*, change the layout of the **declaration page**
 
-**Clarification**, with *disabled* I mean *comment* and with *enabled* I mean *uncomment*
+> **I:** with *disabled* I mean *comment* and with *enabled* I mean *uncomment*
 
-For other options or concerns, reference [https://en.wikibooks.org/wiki/LaTeX/Document_Structure](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Preamble)
+> **I:** for other options or concerns, reference [https://en.wikibooks.org/wiki/LaTeX/Document_Structure](https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Preamble)
 
 #### additional packages
 
@@ -300,7 +299,7 @@ Add custom colours thanks to the package `xcolor`, to use them within the templa
 The colours set by
 default are two: `mdtRed` (hypertext color) and` stripgrey` (front cover strip color)
 
-Full reference on the topic here [https://en.wikibooks.org/wiki/LaTeX/Colors](https://en.wikibooks.org/wiki/LaTeX/Colors)
+> **I:** full reference on the topic here [https://en.wikibooks.org/wiki/LaTeX/Colors](https://en.wikibooks.org/wiki/LaTeX/Colors)
 
 #### hypertext options
 
@@ -323,7 +322,7 @@ pdfstartview			  | *{FitV}* | Set the startup page view, e.g. *FitV* fits the he
 unicode             | *enabled* | If *enabled* unicode encoded PDF strings
 breaklinks				  | *true* | If *true* allow links to break over lines
 
-**Clarification**, with *disabled* I mean *comment* and with *enabled* I mean *uncomment*
+**I:** with *disabled* I mean *comment* and with *enabled* I mean *uncomment*
 
 #### bibliography options
 
@@ -334,9 +333,10 @@ biblatex opt | default | description
 backend | *biber*			  |	Specifies the database backend. The following backends are supported: *biber*, *bibtex*, *bibtex8*
 style   | *alphabetic*  | Citation styles
 
-BibLaTeX reference [https://www.ctan.org/pkg/biblatex](https://www.ctan.org/pkg/biblatex)\
-Biber reference [https://www.ctan.org/pkg/biber](https://www.ctan.org/pkg/biber)\
-Available styles [https://www.overleaf.com/learn/latex/Biblatex_citation_styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
+Take a look at:
+* Available styles [https://www.overleaf.com/learn/latex/Biblatex_citation_styles](https://www.overleaf.com/learn/latex/Biblatex_citation_styles)
+* BibLaTeX reference [https://www.ctan.org/pkg/biblatex](https://www.ctan.org/pkg/biblatex)\
+* Biber reference [https://www.ctan.org/pkg/biber](https://www.ctan.org/pkg/biber)\
 
 ### chapters.tex
 
@@ -350,9 +350,8 @@ Path: `Config/appendices.tex`
 
 Depending on the needs, comment or uncomment the appendices, contained within the `Appendices` folder, which you want to insert into the document. For additional needs, just add new appendices with the same command `\include{Appendices/AppendixAAA}`
 
-## Compilation
+## :computer: Compilation
 
-**Custom-Thesis-Template** was only tested with **pdfLaTeX** compiler !\
 To full compile **Custom-Thesis-Template** follow this standard scheme:
 
 ```shell
@@ -368,9 +367,4 @@ after the first compilation, if the bibliography is not modified or bibliographi
 pdflatex main.tex
 pdflatex main.tex
 ```
-
-## Licensing
-
-<center>
-<br />
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</center>
+> **W:** **Custom-Thesis-Template** was only tested with **pdfLaTeX** compiler !
