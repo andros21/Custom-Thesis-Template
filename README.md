@@ -22,6 +22,7 @@ An elegant LaTeX thesis template designed to be easily customizable
       - [bibliography options](#bibliography-options)
     - [chapters.tex](#chapterstex)
     - [appendices.tex](#appendicestex)
+    - [main.xmpdata](#mainxmpdata)
   - [Compilation](#computer-compilation)
 
 ## :star: Features
@@ -47,8 +48,10 @@ An elegant LaTeX thesis template designed to be easily customizable
         web-8 | web-9 | web-10
         :---: | :---: | :---:
         ![](thumbnails/8-t.png) | ![](thumbnails/9-t.png) | ![](thumbnails/10-t.png)
+        
+        > **I:** all these wonderful wallpapers are downloaded and then uploaded from [here](https://github.com/martinhelso/mnfrontpage/tree/master/mnfrontpage-images)
 
-        But there is no limit to the imagination, free to add new wallpapers inside `Figures/Backgrounds`
+        > **I:** but there is no limit to the imagination, free to add new wallpapers inside `Figures/Backgrounds`
 
     -   **formal cover** particularly suitable for silkscreen printing
 
@@ -65,6 +68,8 @@ An elegant LaTeX thesis template designed to be easily customizable
     -   [chapters.tex](#chapterstex), to add, remove or comment on chapters
 
     -   [appendices.tex](#appendicestex), to add, remove or comment on appendices
+    
+    -   [main.xmpdata](#mainxmpdata), metadata for PDF/A-1b compliance 
 
 ## :rocket: Getting started
 
@@ -350,21 +355,40 @@ Path: `Config/appendices.tex`
 
 Depending on the needs, comment or uncomment the appendices, contained within the `Appendices` folder, which you want to insert into the document. For additional needs, just add new appendices with the same command `\include{Appendices/AppendixAAA}`
 
+## main.xmpdata
+
+Pdf metadata needed for **PDF/A-1b** compliance, all the possible fields are described inside this file `main.xmpdata`, now these are preset:
+
+```latex
+\Title        {The Title Goes Here}
+\Author       {Your Name Goes Here}
+\Copyright    {Copyright \copyright\ 2014 \"Author's Name Goes Here\"}
+```
+
 ## :computer: Compilation
 
 To full compile **Custom-Thesis-Template** follow this standard scheme:
 
-```shell
+```bash
 pdflatex main.tex
-biber main.tex # or bibtex main.tex or bibtex8 main.tex, depending on the chosen backend
+# or bibtex main.tex or bibtex8 main.tex, 
+# depending on the chosen backend
+biber main.tex
 pdflatex main.tex
 pdflatex main.tex
 ```
 
 after the first compilation, if the bibliography is not modified or bibliographic citations are not inserted, it is possible to compile using only:
 
-```shell
+```bash
 pdflatex main.tex
 pdflatex main.tex
 ```
-> **W:** **Custom-Thesis-Template** was only tested with **pdfLaTeX** compiler !
+
+## :unlock: Compatibility
+
+**CTT** has been tested:
+
+- on `GNU/Linux` with [TeX Live](https://www.tug.org/texlive/) distribution and **pdflatex** compiler
+- on `Windows` with [MiKTeX](http://miktex.org/) distribution and **pdflatex** compiler
+
