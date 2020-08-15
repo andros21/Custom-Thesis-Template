@@ -1,0 +1,160 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% 	Custom Thesis Template (Style File)
+% 	Info: Package for creating front/back cover pages
+% 	Derived from "mnfrontpage.sty" implemented by Martin Helsø (martibhe@math.uio.no)
+% 	Version 2015-12-21
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%----------------------------------------------------------------------------------------
+%	FRONT/BACK COVER STYLE
+%----------------------------------------------------------------------------------------
+
+%	REQUIRED PACKAGES
+
+\RequirePackage{eso-pic}
+\RequirePackage{afterpage}
+\RequirePackage{tikz}
+\RequirePackage{picture}
+\RequirePackage{xifthen}
+\RequirePackage{calc}
+
+%----------------------------------------------------------------------------------------
+
+%	APPO VARS
+
+\def \FCBnr  {\FrontCoverBackgroundNumber}
+\def \FCBtp  {\FrontCoverBackgroundType}
+
+\def \FCSclA  {\FrontCoverStripColourA}
+\def \FCSopA  {\FrontCoverStripOpacityA}
+\def \FCSclB  {\FrontCoverStripColourB}
+\def \FCSopB  {\FrontCoverStripOpacityB}
+\def \FCSclC  {\FrontCoverStripColourC}
+\def \FCSopC  {\FrontCoverStripOpacityC}
+\def \FCSY    {\FrontCoverStripsY}
+
+\def \FCBNpt  {\FrontCoverBannerPath}
+\def \FCBNsl  {\FrontCoverBannerScale}
+\def \FCBNX   {\FrontCoverBannerX}
+\def \FCBNY   {\FCSY+\FrontCoverBannerY}
+
+\def \FCTft   {\FrontCoverTitleFont}
+\def \FCTfts  {\FrontCoverTitleFontSpace}
+\def \FCTX    {\FCBNX+\FrontCoverTitleX}
+\def \FCTY    {\FCBNY-\FrontCoverTitleY}
+
+\def \FCAft   {\FrontCoverAuthorFont}
+\def \FCAfts  {\FrontCoverAuthorFontSpace}
+\def \FCAX    {1mm+\FCTX+\FrontCoverAuthorX}
+\def \FCAY    {\FCTY-\FrontCoverAuthorY}
+
+\def \FCDft   {\FrontCoverDegreeFont}
+\def \FCDfts  {\FrontCoverDegreeFontSpace}
+\def \FCDX    {\FCAX+\FrontCoverDegreeX}
+\def \FCDY    {\FCAY-\FrontCoverDegreeY}
+
+\def \FCPft   {\FrontCoverSupervisorFont}
+\def \FCPfts  {\FrontCoverSupervisorFontSpace}
+\def \FCPX    {\FCDX+\FrontCoverSupervisorX}
+\def \FCPY    {\FCSY+\FrontCoverSupervisorY}
+
+\def \BCBnr   {\BackCoverBackgroundNumber}
+\def \BCBtp   {\FrontCoverBackgroundType}
+
+%----------------------------------------------------------------------------------------
+
+%	NEW COMMANDS
+
+\newcommand\blankpage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+
+\newcommand\FrontCoverBackground{
+    \put(-3,0){
+	    \parbox[b][\paperheight]{\paperwidth}{%
+	    \vfill
+	    \centering
+	    \includegraphics[width=\paperwidth,height=\paperheight]{Backgrounds/\FCBtp-\FCBnr}
+	    \vfill
+    	}	
+    }
+}
+
+\newcommand\FrontCoverStrip{
+    \put(0 mm, \FCSY){
+		\begin{tikzpicture}[scale = 1mm]
+		\filldraw[\FCSclA, opacity = \FCSopA] 
+		(0, 2.5) rectangle (\paperwidth, 4);
+		\filldraw[\FCSclB, opacity = \FCSopB] 
+		(0, 0) rectangle (\paperwidth, 2.5);
+		\filldraw[\FCSclC, opacity = \FCSopC] 
+		(0, 0) rectangle (\paperwidth, -1.2);
+		\end{tikzpicture}
+	}
+}
+
+\newcommand\FrontCoverBanner{
+	\put(\FCBNX, \FCBNY){
+		\includegraphics[scale = \FCBNsl]{\FCBNpt}
+	}
+}
+
+\newcommand\FrontCoverTitle{
+	\put(\FCTX, \FCTY){
+		\vbox{\flushleft \bfseries\fontsize{\FCTft}{\FCTfts}\selectfont \Title}
+	}
+}
+
+\newcommand\FrontCoverAuthor{
+	\put(\FCAX, \FCAY){
+		\vbox{\bfseries\fontsize{\FCAft}{\FCAfts}\selectfont \AuthorName\ \AuthorSurName}
+	}
+}
+
+\newcommand\FrontCoverDegreeName{
+	\put(\FCDX, \FCDY){
+		\vbox{\bfseries\fontsize{\FCDft}{\FCDfts}\selectfont \DegreeName, \Date}
+	}
+}
+
+\newcommand\FrontCoverSupervisor{
+	\put(\FCPX, \FCPY){
+		\vbox{
+			\fontsize{\FCPft}{\FCPfts}\selectfont 
+			\SupervisorLabelA\\\
+			\textbf{\SupervisorNameA\ \textsc{\SupervisorSurNameA}}\\[1mm]
+			\SupervisorLabelB\\\
+			\textbf{\SupervisorNameB\ \textsc{\SupervisorSurNameB}}
+		}
+	}
+}
+
+\newcommand\FrontCover{
+	\FrontCoverBackground
+	\FrontCoverStrip
+	\FrontCoverBanner
+	\FrontCoverTitle
+	\FrontCoverAuthor
+	\FrontCoverDegreeName
+	\FrontCoverSupervisor
+}
+
+\newcommand\BackCoverBackground{
+	\put(-3,0){
+		\parbox[b][\paperheight]{\paperwidth}{
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight]{Backgrounds/\BCBtp-\BCBnr}
+			\vfill
+		}
+	}
+}
+
+\newcommand\BackCover{
+	\BackCoverBackground
+}

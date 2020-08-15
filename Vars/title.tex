@@ -1,0 +1,55 @@
+% ----------------------------------------------------------------------------------------
+% TITLE PAGE
+% ----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+\def \Markpt {\MarkPath}
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+	
+  \begin{center}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[scale=\MarkScale]{\Markpt}
+    \end{figure}
+    \vspace{1cm}
+    
+    \textsc{\Large \DegreeName}\\[0.2mm] % Thesis type
+
+    \HRule \\[0.4cm] % Horizontal line
+    {\huge \bfseries \Title}  % Thesis title
+    \ifthenelse{\equal{ \SubTitle}{} }{ {} }{ \\\vspace{0.4cm}{ \bfseries \SubTitle} }
+    \HRule \\[1.5cm] % Horizontal line
+ 
+    \begin{minipage}[t]{0.4\textwidth}
+      \begin{flushleft} \large
+        \emph{\AuthorLabel}\\
+        \textcolor{mdtRed}{\AuthorName\ \textsc{\AuthorSurName}}\\ % Author name - remove the \href bracket to remove the link
+        \Matricola
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{\SupervisorLabelA} \\
+        \textcolor{mdtRed}{\SupervisorNameA\ \textsc{\SupervisorSurNameA}}
+        \\\vspace{2mm}
+        \emph{\SupervisorLabelB} \\
+        \textcolor{mdtRed}{\SupervisorNameB\ \textsc{\SupervisorSurNameB}}
+      \end{flushright}
+    \end{minipage}
+
+	\vspace{4cm}
+    \ifthenelse{\equal{ \Faculty}{} }{ {} }{ {\Faculty \leavevmode\\} }
+    \ifthenelse{\equal{ \University}{} }{ {} }{ {\University \leavevmode\\} }
+    \ifthenelse{\equal{ \Department}{} }{ {} }{ {\Department \leavevmode\\} }
+    \ifthenelse{\equal{ \GroupName}{} }{ {} }{ {\GroupName \leavevmode\\} }
+    \vspace{1cm}
+ 
+    {\large \AccademicYearLabel\ \AccademicYear} \\[4cm] % Date
+    \vfill
+    
+  \end{center}
+
+\end{titlepage}

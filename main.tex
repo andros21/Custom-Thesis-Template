@@ -1,0 +1,216 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%
+% 	Custom Thesis Template
+%
+% 	"main.tex" and "main.cls" are a derivative of "Masters/Doctoral Thesis" by
+% 	LaTeX Template (http://www.LaTeXTemplates.com)
+% 	Version 2.5 (27/8/17)
+%
+%	And "Masters/Doctoral Thesis" is a derivative of another template by:
+%     - Vel (vel@latextemplates.com)
+% 	  - Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% 	  - Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% 	Custom Thesis Template is licensed under
+% 	CC BY-NC-SA 4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+%	by Andrea Rossoni (21/12/19)
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\include{Config/config}
+
+%----------------------------------------------------------------------------------------
+%	INFORMATION CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\include{Config/info}
+
+%----------------------------------------------------------------------------------------
+%	BOOL VARIABLES
+%----------------------------------------------------------------------------------------
+
+\newboolean{FCB}
+\setboolean{FCB}{\FrontCoverBool}
+
+\newboolean{DB}
+\setboolean{DB}{\DeclarationBool}
+
+\newboolean{QB}
+\setboolean{QB}{\QuotationBool}
+
+\newboolean{AB}
+\setboolean{AB}{\AbstractBool}
+
+\newboolean{AkB}
+\setboolean{AkB}{\AcknowledgementsBool}
+
+\newboolean{LOFB}
+\setboolean{LOFB}{\ListofFiguresBool}
+
+\newboolean{LOTB}
+\setboolean{LOTB}{\ListofTablesBool}
+
+\newboolean{AbB}
+\setboolean{AbB}{\AbbreviationsBool}
+
+\newboolean{CB}
+\setboolean{CB}{\CostantsBool}
+
+\newboolean{SB}
+\setboolean{SB}{\SymbolsBool}
+
+\newboolean{BB}
+\setboolean{BB}{\BackCoverBool}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT START
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\frontmatter 					% Use roman page numbering style (i, ii, iii, iv...) 
+								% for the pre-content pages
+\pagestyle{plain} 				% Default to the plain heading style until the thesis
+								% style is called for the body content
+								
+% ----------------------------------------------------------------------------------------
+% FRONT-COVER PAGE
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{ \boolean{FCB} }
+{
+	\AddToShipoutPicture*{\FrontCover}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+}
+{
+	\include{Vars/title}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+}
+
+% ----------------------------------------------------------------------------------------
+% TITLE PAGE
+% ----------------------------------------------------------------------------------------
+
+\include{Vars/title}
+
+% ----------------------------------------------------------------------------------------
+% DECLARATION PAGE
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{DB}}{\include{Vars/declaration}}{ }
+
+\cleardoublepage
+
+% ----------------------------------------------------------------------------------------
+% QUOTATION PAGE
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{QB}}{\include{Vars/quotation}}{ }
+
+% ----------------------------------------------------------------------------------------
+% ABSTRACT PAGE
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{AB}}{\include{Vars/abstract}}{ }
+
+% ----------------------------------------------------------------------------------------
+% ACKNOWLEDGEMENTS
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{AkB}}{\include{Vars/acknowledgements}}{ }
+
+% ----------------------------------------------------------------------------------------
+% LIST OF CONTENTS/FIGURES/TABLES PAGES
+% ----------------------------------------------------------------------------------------
+
+% Prints the main table of contents
+\tableofcontents
+
+% Prints the list of figures
+\ifthenelse{\boolean{LOFB}}{\listoffigures}{ }
+
+% Prints the list of tables
+\ifthenelse{\boolean{LOTB}}{\listoftables}{ }
+
+% ----------------------------------------------------------------------------------------
+% ABBREVIATIONS
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{AbB}}{\include{Vars/abbreviations}}{ }
+
+% ----------------------------------------------------------------------------------------
+% PHYSICAL CONSTANTS/OTHER DEFINITIONS
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{CB}}{\include{Vars/constants}}{ }
+
+% ----------------------------------------------------------------------------------------
+% SYMBOLS
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{\boolean{SB}}{\include{Vars/symbols}}{ }
+
+% ----------------------------------------------------------------------------------------
+% DEDICATION
+% ----------------------------------------------------------------------------------------
+
+% \dedicatory{For/Dedicated to/To my\ldots}
+
+% ----------------------------------------------------------------------------------------
+% THESIS CONTENT - CHAPTERS
+% ----------------------------------------------------------------------------------------
+
+\mainmatter 			% Begin numeric (1,2,3...) page numbering
+\pagestyle{thesis} 		% Return the page headers back to the "thesis" style
+
+ \input{Config/chapters}
+
+% ----------------------------------------------------------------------------------------
+% THESIS CONTENT - APPENDICES
+% ----------------------------------------------------------------------------------------
+
+% Cue to tell LaTeX that the following "chapters" are Appendices
+ \appendix
+
+ \input{Config/appendices}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+% The filename of the bibliography
+
+ \printbibliography[heading=bibintoc]
+
+% ----------------------------------------------------------------------------------------
+% BACK-COVER PAGE
+% ----------------------------------------------------------------------------------------
+
+\ifthenelse{ \boolean{BB} }
+{
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\clearpage
+	\AddToShipoutPicture*{\BackCover}
+	\afterpage{\blankpage}
+}
+{
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+	\afterpage{\blankpage}
+}
+
+% ----------------------------------------------------------------------------------------
+
+\end{document}  
