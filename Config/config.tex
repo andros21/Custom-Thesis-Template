@@ -3,166 +3,164 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-11pt, 							% The default document font size
-twoside, 						% Two side (alternating margins) for binding by default, 
-%								% Uncomment to switch to one side
-italian, 						% Language, example "ngerman" for German
-singlespacing, 					% Single line spacing, alternatives: onehalfspacing or doublespacing
-%draft, 						% Uncomment to enable draft mode (no pictures, no links, 
-%								% overfull hboxes indicated)
-%nolistspacing, 				% If the document is onehalfspacing or doublespacing, 
-%								% uncomment this to set spacing in lists to single
-%liststotoc, 					% Uncomment to add the list of figures/tables/etc to the table of contents
-%toctotoc, 						% Uncomment to add the main table of contents to the table of contents
-%parskip, 						% Uncomment to add space between paragraphs
-%nohyperref, 					% Uncomment to not load the hyperref package
-headsepline, 					% Uncomment to get a line under the header
-%chapterinoneline, 				% Uncomment to place the chapter title next to the number on one line
-%consistentlayout, 				% Uncomment to change the layout of the declaration, 
-%								% abstract and acknowledgements pages to match the default layout
-]{main} 						% The class file specifying the document structure
+11pt,               % The default document font size
+twoside,            % Two side (alternating margins) for binding by default,
+%                   % Uncomment to switch to one side
+english,            % Language, example "ngerman" for German
+singlespacing,      % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft,             % Uncomment to enable draft mode (no pictures, no links,
+%	            % overfull hboxes indicated)
+%nolistspacing,     % If the document is onehalfspacing or doublespacing,
+%                   % uncomment this to set spacing in lists to single
+%liststotoc,        % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc,          % Uncomment to add the main table of contents to the table of contents
+%parskip,           % Uncomment to add space between paragraphs
+%nohyperref,        % Uncomment to not load the hyperref package
+headsepline,        % Uncomment to get a line under the header
+%chapterinoneline,  % Uncomment to place the chapter title next to the number on one line
+%consistentlayout,  % Uncomment to change the layout of the declaration,
+%                   % abstract and acknowledgements pages to match the default layout
+]{main}             % The class file specifying the document structure
 
 %%%
 %%%%% ADDITIONAL PACKAGES, remove or uncomment examples and please add here other ones
 %%%
 
-% \usepackage{subfig} 			% This package provides support for the manipulation and reference of small or ‘sub’ floats
-%								% within a single floating environment
-								
-% \usepackage{pdfpages} 		% This package simplifies the inclusion of external multi-page PDF documents in LaTeX documents
+% \usepackage{subfig}                   % This package provides support for the manipulation and reference
+                                        % of small or ‘sub’ floats within a single floating environment
 
-% \usepackage{epigraph}         % The epigraph package provides commands for typesetting a single epigraph 
-%							    % and environments for typesetting a list of epigraphs
+% \usepackage{pdfpages}                 % This package simplifies the inclusion of external multi-page PDF documents in LaTeX documents
+
+% \usepackage{epigraph}                 % The epigraph package provides commands for typesetting a single epigraph
+                                        % and environments for typesetting a list of epigraphs
 
 % \usepackage{amsmath}
-% \usepackage{amsthm} 
-% \usepackage{amssymb} 
+% \usepackage{amsthm}
+% \usepackage{amssymb}
 % \usepackage{mathtools}
 % \usepackage{physics}
-% \usepackage{minted} 			% The package that facilitates expressive syntax highlighting in LaTeX using the powerful Pygments library
+% \usepackage{minted}                   % The package that facilitates expressive syntax highlighting in LaTeX using the powerful Pygments library
 
 %%%
 %%%%% CUSTOM FRONT-COVER PAGE
 %%%
 
-\newcommand		{\FrontCoverBool}						{true}
+\newcommand		{\FrontCoverBool}                               {true}
 
-\newcommand		{\FrontCoverBackgroundNumber}			{5}
-\newcommand		{\FrontCoverBackgroundType}				{web}
+\newcommand		{\FrontCoverBackgroundNumber}                   {5}
+\newcommand		{\FrontCoverBackgroundType}                     {web}
 
-\newcommand		{\FrontCoverStripColourA}				{white}
-\newcommand		{\FrontCoverStripOpacityA}				{0.8}
-\newcommand		{\FrontCoverStripColourB}				{stripgrey}
-\newcommand		{\FrontCoverStripOpacityB}				{0.7}
-\newcommand		{\FrontCoverStripColourC}				{white}
-\newcommand		{\FrontCoverStripOpacityC}				{0.8}
-\newcommand		{\FrontCoverStripsY}					{100mm}
+\newcommand		{\FrontCoverStripColourA}                       {white}
+\newcommand		{\FrontCoverStripOpacityA}                      {0.8}
+\newcommand		{\FrontCoverStripColourB}                       {stripgrey}
+\newcommand		{\FrontCoverStripOpacityB}                      {0.7}
+\newcommand		{\FrontCoverStripColourC}                       {white}
+\newcommand		{\FrontCoverStripOpacityC}                      {0.8}
+\newcommand		{\FrontCoverStripsY}                            {100mm}
 
-\newcommand		{\FrontCoverBannerPath}					{Banners/banner}
-\newcommand		{\FrontCoverBannerScale}				{1.4}
-\newcommand		{\FrontCoverBannerX}					{10mm}
-\newcommand		{\FrontCoverBannerY}					{110mm}
+\newcommand		{\FrontCoverBannerPath}                         {Banners/banner}
+\newcommand		{\FrontCoverBannerScale}                        {1.4}
+\newcommand		{\FrontCoverBannerX}                            {10mm}
+\newcommand		{\FrontCoverBannerY}                            {110mm}
 
-\newcommand		{\FrontCoverTitleFont}					{50}
-\newcommand		{\FrontCoverTitleFontSpace}				{50}
-\newcommand		{\FrontCoverTitleX}						{40mm}
-\newcommand		{\FrontCoverTitleY}						{30mm}
+\newcommand		{\FrontCoverTitleFont}                          {50}
+\newcommand		{\FrontCoverTitleFontSpace}                     {50}
+\newcommand		{\FrontCoverTitleX}                             {40mm}
+\newcommand		{\FrontCoverTitleY}                             {30mm}
 
-\newcommand		{\FrontCoverAuthorFont}					{25}
-\newcommand		{\FrontCoverAuthorFontSpace}			{25}
-\newcommand		{\FrontCoverAuthorX}					{0mm}
-\newcommand		{\FrontCoverAuthorY}					{20mm}
+\newcommand		{\FrontCoverAuthorFont}                         {25}
+\newcommand		{\FrontCoverAuthorFontSpace}                    {25}
+\newcommand		{\FrontCoverAuthorX}                            {0mm}
+\newcommand		{\FrontCoverAuthorY}                            {20mm}
 
-\newcommand		{\FrontCoverDegreeFont}					{20}
-\newcommand		{\FrontCoverDegreeFontSpace}			{20}
-\newcommand		{\FrontCoverDegreeX}					{0mm}
-\newcommand		{\FrontCoverDegreeY}					{12mm}
+\newcommand		{\FrontCoverDegreeFont}                         {20}
+\newcommand		{\FrontCoverDegreeFontSpace}                    {20}
+\newcommand		{\FrontCoverDegreeX}                            {0mm}
+\newcommand		{\FrontCoverDegreeY}                            {12mm}
 
-\newcommand		{\FrontCoverSupervisorFont}				{18}
-\newcommand		{\FrontCoverSupervisorFontSpace}		{20}
-\newcommand    	{\FrontCoverSupervisorX}				{0mm}
-\newcommand    	{\FrontCoverSupervisorY}				{4mm}
+\newcommand		{\FrontCoverSupervisorFont}                     {18}
+\newcommand		{\FrontCoverSupervisorFontSpace}                {20}
+\newcommand             {\FrontCoverSupervisorX}                        {0mm}
+\newcommand             {\FrontCoverSupervisorY}                        {4mm}
 
 %%%
 %%%%% CUSTOM TITLE PAGE OR FORMAL COVER
 %%%
 
-\newcommand		{\MarkPath}								{Marks/mark}
-\newcommand		{\MarkScale}							{1.5}
+\newcommand		{\MarkPath}                                     {Marks/mark}
+\newcommand		{\MarkScale}                                    {1.5}
 
 %%%
 %%%%% CUSTOM FORMAL PAGES BEFORE TOC
 %%%
 
-\newcommand		{\DeclarationBool}						{false}
-\newcommand		{\QuotationBool}						{false}
-\newcommand		{\AbstractBool}							{true}
-\newcommand		{\AcknowledgementsBool}					{false}
+\newcommand		{\DeclarationBool}                              {false}
+\newcommand		{\QuotationBool}                                {false}
+\newcommand		{\AbstractBool}                                 {true}
+\newcommand		{\AcknowledgementsBool}                         {false}
 
 %%%
 %%%%% CUSTOM FORMAL PAGES AFTER TOC
 %%%
 
-\newcommand		{\ListofFiguresBool}					{false}
-\newcommand		{\ListofTablesBool}						{false}
+\newcommand		{\ListofFiguresBool}                            {false}
+\newcommand		{\ListofTablesBool}                             {false}
 
-\newcommand		{\AbbreviationsBool}					{false}
-\newcommand		{\CostantsBool}							{false}
-\newcommand		{\SymbolsBool}							{false}
+\newcommand		{\AbbreviationsBool}                            {false}
+\newcommand		{\CostantsBool}                                 {false}
+\newcommand		{\SymbolsBool}                                  {false}
 
 %%%
 %%%%% CUSTOM BACK-COVER PAGE
 %%%
 
-\newcommand		{\BackCoverBool}						{true}
-
-\newcommand		{\BackCoverBackgroundNumber}			{5}
+\newcommand		{\BackCoverBool}                                {true}
+\newcommand		{\BackCoverBackgroundNumber}                    {5}
 
 %%%
 %%%%% CUSTOM MARGIN
 %%%
 
-\geometry{ 
-	bindingoffset = .5cm, 				% Binding offset
-	top           = 1.5cm,				% Top margin
-	bottom        = 1.5cm,				% Bottom margin
+\geometry{
+	bindingoffset = .5cm,      % Binding offset
+	top           = 1.5cm,     % Top margin
+	bottom        = 1.5cm,     % Bottom margin
 }
 
 %%%
 %%%%% CUSTOM COLOR
 %%%
 
-\colorlet{mdtRed}{red!50!black}					% Personalized color
-\definecolor{stripgrey}{cmyk}{0, 0, 0, 0.3}		% Personalized color
+\colorlet{mdtRed}{red!50!black}                 % Personalized color
+\definecolor{stripgrey}{cmyk}{0, 0, 0, 0.3}     % Personalized color
 
 %%%
 %%%%% CUSTOM HYPERTEXT
 %%%
 
 \hypersetup{
-	pdfpagemode     		= {UseOutlines},
-	bookmarksopen			= true,
-	bookmarksopenlevel		= 0,
-	hypertexnames			= false,
-	%hidelinks,								% Uncomment if you want to hide all links color beacuse you need to print B&W
-	colorlinks				= true,			% Set to false to disable coloring links
-	citecolor				= mdtRed,		% The color of citations
-	linkcolor				= mdtRed,		% The color of references to document elements (sections, figures, etc)
-	urlcolor				= magenta,		% The color of hyperlinks (URLs)
-	pdfstartview			= {FitV},
+	pdfpagemode               = {UseOutlines},
+	bookmarksopen             = true,
+	bookmarksopenlevel        = 0,
+	hypertexnames             = false,
+	%hidelinks,                                % Uncomment if you want to hide all links color beacuse you need to print B&W
+	colorlinks                = true,          % Set to false to disable coloring links
+	citecolor                 = mdtRed,        % The color of citations
+	linkcolor                 = mdtRed,        % The color of references to document elements (sections, figures, etc)
+	urlcolor                  = magenta,       % The color of hyperlinks (URLs)
+	pdfstartview              = {FitV},
 	unicode,
-	breaklinks				= true,
+	breaklinks                = true,
 }
- 
+
 %%%
 %%%%% BIBLIOGRAPHY PACKAGE AND CONFIG
 %%%
 
  \usepackage[
-	backend = biber,						% Specifies the database backend
-	style   = alphabetic,					% Loads the bibliography style
-	natbib  = false							% Loads compatibility module which provides aliases for the citation 
-	%										% commands of the "natbib" package
+	backend = biber,         % Specifies the database backend
+	style   = alphabetic,    % Loads the bibliography style
+	natbib  = false          % Loads compatibility module which provides aliases for the citation
+	%                        % commands of the "natbib" package
  ]{biblatex}
  \addbibresource{main.bib}
-  

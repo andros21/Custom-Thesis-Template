@@ -4,10 +4,10 @@
 %	derived from "Masters/Doctoral Thesis" (Class File)
 %	Version 1.6 (27/8/17) downloaded from http://www.LaTeXTemplates.com
 %	Authors:
-%	   - Vel (vel@latextemplates.com)
-%	   - Johannes Böttcher
+%     - Vel (vel@latextemplates.com)
+%     - Johannes Böttcher
 %   "Masters/Doctoral Thesis" Class license:
-% 	LPPL v1.3c (http://www.latex-project.org/lppl)
+%   LPPL v1.3c (http://www.latex-project.org/lppl)
 %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
