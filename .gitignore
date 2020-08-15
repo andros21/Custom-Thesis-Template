@@ -8,5 +8,5 @@
 *.bcf
 *.bbl
 *.dvi
-*.pdf
+main.pdf
 *.xmpi
