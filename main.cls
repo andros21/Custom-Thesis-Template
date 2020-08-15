@@ -212,7 +212,9 @@
 
 \usepackage{hyperref}					% The hyperref package is used to handle cross-referencing commands in LaTeX 
 										% to produce hypertext links in the document
-\usepackage[a-1b]{pdfx}
+										
+\usepackage[a-1b]{pdfx}                 % The package helps LaTeX users to create PDF/X, PFD/A and other standards-compliant 
+                                        % PDF documents with pdfTeX,
 
 \usepackage[autostyle=true]{csquotes}	% Required to generate language-dependent quotes in the bibliography
 
