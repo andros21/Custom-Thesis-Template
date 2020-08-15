@@ -114,7 +114,8 @@ University          | University name | *University of Milan*
 DepartmentName      | Department name | *Department of Physics*
 GroupName           | Group of research name | *Complex Systems Groups*
 
-> **I:** all fields deemed unnecessary can be removed from the document leaving the corresponding field empty, e.g. `\newcommand{GroupName}{}`
+> **I:** all fields deemed unnecessary can be removed from the document \
+leaving the corresponding field empty, e.g. `\newcommand{GroupName}{}`
 
 ### config.tex
 
@@ -208,6 +209,9 @@ FrontCoverSupervisorFontSpace | *20* | SupervisorName newlines space, see [info.
 FrontCoverSupervisorX        | *0mm* | Distance between GREEN-BOX left border and CYAN-BOX left border
 FrontCoverSupervisorY        | *4mm* | Distance between GREEN-BOX top border and STRIPB bottom border
 
+> **W:** pay attention to choose a `FrontCoverBannerPath` with similar pixels dimension of the original, \
+otherwise all may be overmoved
+
 Informal cover boxes | Formal cover boxes
 :---: | :---:
 ![](thumbnails/fc-quotes-dim.png) | ![](thumbnails/fc0-quotes-dim.png)
@@ -218,6 +222,9 @@ formal cover opt | default | description
 :--- | :--- | :---
 MarkPath | `Marks/mark` | Path of front cover university mark, YELLOW-BOX
 MarkScale | *1.5* | Scale of front cover university mark, YELLOW-BOX scale
+
+> **W:** pay attention to choose a `MarkPath` with similar pixels dimension of the original, \
+otherwise all may be overmoved
 
 #### title page
 
